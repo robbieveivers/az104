@@ -1,0 +1,2 @@
+connect-azuread
+Get-AzureADUser
