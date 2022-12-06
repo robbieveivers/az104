@@ -8,9 +8,9 @@ New-AzResourceGroupDeployment `
    -TemplateParameterFile .\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\04\az104-04-vms-loop-parameters.json
 
    
-20.169.242.46  vm0
+20.169.242.46 # vm0
 
-40.87.97.188  vm1
+40.87.97.188 # vm1
 
 robertveivers.com.au
 
