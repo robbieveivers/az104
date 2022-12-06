@@ -45,3 +45,10 @@ $vnet2 = Get-AzVirtualNetwork -Name 'az104-05-vnet2' -ResourceGroupName $rgname
 Add-AzVirtualNetworkPeering -Name 'az104-05-vnet1_to_az104-05-vnet2' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet2.Id
 
 Add-AzVirtualNetworkPeering -Name 'az104-05-vnet2_to_az104-05-vnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
+
+
+##Clean Up Scripts
+Get-AzResourceGroup -Name 'az104-05*'
+Get-AzResourceGroup -Name 'az104-05*' | Remove-AzResourceGroup -Force -AsJob
+Get-AzResourceGroup -Name 'Net*' | Remove-AzResourceGroup -Force -AsJob
+Get-Job
